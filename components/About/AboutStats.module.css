@@ -1,0 +1,60 @@
+/* components/About/AboutStats.module.css */
+.section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0f1123 0%, #13172e 100%);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.statCard {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.statIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #22c55e, #149042);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .statNumber {
+    font-size: 1.5rem;
+  }
+}

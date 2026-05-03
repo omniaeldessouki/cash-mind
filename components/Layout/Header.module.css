@@ -1,0 +1,114 @@
+/* components/Header.module.css */
+.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logoIcon {
+  font-size: 1.8rem;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+   background: linear-gradient(135deg, #22c55e, #149042);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  font-size: 1rem;
+}
+
+.navLink:hover {
+  color: #22c55e;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.loginBtn {
+  background: transparent;
+  border: 1px solid #22c55e;
+  color: #22c55e;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.loginBtn:hover {
+  /* background: rgba(245, 176, 66, 0.1); */
+   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(63, 198, 74, 0.3);
+}
+
+.signupBtn {
+  background: linear-gradient(135deg, #22c55e, #149042);
+  border: none;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.signupBtn:hover {
+  transform: translateY(-2px);
+   box-shadow: 0 4px 12px rgba(63, 198, 74, 0.3);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .actions {
+    width: 100%;
+    justify-content: center;
+  }
+}

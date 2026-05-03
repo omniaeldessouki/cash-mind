@@ -1,0 +1,125 @@
+/* components/Footer.module.css */
+.footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  border-top: 1px solid #1e293b;
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 2rem 1.5rem;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #1e293b;
+}
+
+.brand {
+  flex: 1;
+  min-width: 200px;
+}
+
+.logoIcon {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #22c55e, #149042);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-top: 0.25rem;
+}
+
+.linksGrid {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.linkGroup h4 {
+  color: #f1f5f9;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.linkGroup a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.linkGroup a:hover {
+  color: #f5b042;
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+.social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social span {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.social span:hover {
+  color: #f5b042;
+}
+
+.copyright {
+  color: #64748b;
+}
+
+@media (max-width: 768px) {
+  .topSection {
+    flex-direction: column;
+  }
+  .linksGrid {
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  .bottomSection {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .container {
+    padding: 2rem 1rem 1rem;
+  }
+}

@@ -1,0 +1,688 @@
+/* components/BlogPreview.module.css
+.section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #f59e0b20, #ea580c20);
+  border-radius: 50px;
+  color: #f59e0b;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #0f172a, #334155);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.viewAllBtn {
+  display: inline-block;
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.viewAllBtn:hover {
+  transform: translateX(5px);
+}
+
+.articlesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.articleCard {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.articleCard.hovered {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+  position: relative;
+  height: 180px;
+  background: linear-gradient(135deg, #667eea20, #764ba220);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.imageEmoji {
+  font-size: 5rem;
+  transition: transform 0.3s;
+}
+
+.articleCard.hovered .imageEmoji {
+  transform: scale(1.1);
+}
+
+.category {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  color: #0f172a;
+}
+
+.content p {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.7rem;
+  color: #22c55e;
+  background: #22c55e10;
+  padding: 0.2rem 0.6rem;
+  border-radius: 15px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.authorAvatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #22c55e, #149042);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorName {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #0f172a;
+}
+
+.authorRole {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.readMore:hover {
+  gap: 1rem;
+}
+
+.newsletter {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 30px;
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.newsletterContent {
+  position: relative;
+  z-index: 1;
+}
+
+.newsletterIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.newsletter p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.newsletterForm input {
+  flex: 1;
+  min-width: 250px;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+.newsletterForm button {
+  padding: 1rem 2rem;
+  background: #22c55e;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.newsletterForm button:hover {
+  background: #149042;
+  transform: translateY(-2px);
+}
+
+.privacy {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .articlesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .newsletter {
+    padding: 2rem;
+  }
+  
+  .newsletter h3 {
+    font-size: 1.3rem;
+  }
+} */
+ /* components/BlogPreview.module.css */
+.section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background circles */
+.section::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.08) 0%, transparent 70%);
+  top: -100px;
+  left: -100px;
+  border-radius: 50%;
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.05) 0%, transparent 70%);
+  bottom: -50px;
+  right: -50px;
+  border-radius: 50%;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(34, 197, 94, 0.15);
+  border-radius: 50px;
+  color: #22c55e;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #22c55e, #149042);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.header p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.viewAllBtn {
+  display: inline-block;
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.viewAllBtn::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #22c55e;
+  transition: width 0.3s;
+}
+
+.viewAllBtn:hover::after {
+  width: 100%;
+}
+
+.viewAllBtn:hover {
+  transform: translateX(5px);
+}
+
+/* Articles Grid */
+.articlesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.articleCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.articleCard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(34, 197, 94, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.5);
+}
+
+.cardImage {
+  height: 160px;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.imageEmoji {
+  font-size: 4rem;
+  transition: transform 0.3s;
+}
+
+.articleCard:hover .imageEmoji {
+  transform: scale(1.1);
+}
+
+.category {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(34, 197, 94, 0.9);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.cardContent h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: white;
+  line-height: 1.4;
+}
+
+.cardContent p {
+  color: #94a3b8;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.7rem;
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 15px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.authorAvatar {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #22c55e, #149042);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+}
+
+.author span {
+  color: #cbd5e1;
+  font-size: 0.85rem;
+}
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #22c55e;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.readMore:hover {
+  gap: 1rem;
+  color: #149042;
+}
+
+/* Newsletter Section */
+.newsletter {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(20, 144, 66, 0.1));
+  border-radius: 30px;
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.newsletter::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.newsletterContent {
+  position: relative;
+  z-index: 1;
+}
+
+.newsletterIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.newsletter p {
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.newsletterForm input {
+  flex: 1;
+  min-width: 250px;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  transition: all 0.3s;
+}
+
+.newsletterForm input:focus {
+  outline: none;
+  border-color: #22c55e;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.newsletterForm input::placeholder {
+  color: #64748b;
+}
+
+.newsletterForm button {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #22c55e, #149042);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.newsletterForm button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.4);
+}
+
+.privacy {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .articlesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .newsletter {
+    padding: 2rem;
+  }
+  
+  .newsletter h3 {
+    font-size: 1.3rem;
+  }
+  
+  .newsletterForm {
+    flex-direction: column;
+  }
+  
+  .newsletterForm input,
+  .newsletterForm button {
+    width: 100%;
+  }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.articleCard {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.articleCard:nth-child(1) { animation-delay: 0.1s; }
+.articleCard:nth-child(2) { animation-delay: 0.2s; }
+.articleCard:nth-child(3) { animation-delay: 0.3s; }

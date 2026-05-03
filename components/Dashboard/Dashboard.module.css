@@ -1,0 +1,508 @@
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+
+.sidebar {
+  width: 280px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
+
+.sidebarHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #22c55e, #149042);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+.sidebarStats {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebarStat {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.statPeriod {
+  font-size: 0.7rem;
+  color: #64748b;
+  margin-bottom: 0.25rem;
+}
+
+.statAmount {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #22c55e;
+}
+
+.sidebarNav {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navItem {
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 12px;
+  text-align: left;
+  transition: all 0.3s;
+}
+
+.navItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.navItem.active {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.sidebarFooter {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.userAvatar {
+  width: 40px;
+  height: 40px;
+  background: rgba(34, 197, 94, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.userName {
+  color: white;
+  font-weight: 500;
+}
+
+.logoutBtn {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(239, 68, 68, 0.15);
+  border: none;
+  border-radius: 12px;
+  color: #f87171;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.logoutBtn:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+
+.mainContent {
+  flex: 1;
+  margin-left: 280px;
+  padding: 2rem;
+}
+
+.contentHeader {
+  margin-bottom: 2rem;
+}
+
+.contentHeader h1 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.contentHeader p {
+  color: #94a3b8;
+}
+
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+
+.statCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.statIcon {
+  font-size: 2.5rem;
+}
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.statValue {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #22c55e;
+}
+
+
+.section {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section h2 {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.categoryCard {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+.categoryHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.categoryName {
+  color: white;
+  font-weight: 500;
+}
+
+.categoryAmount {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.progressBar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+.categoryPercent {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+
+.expenseForm {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.expenseForm input,
+.expenseForm select {
+  flex: 1;
+  min-width: 150px;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.expenseForm input:focus,
+.expenseForm select:focus {
+  outline: none;
+  border-color: #22c55e;
+}
+
+.expenseForm button {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #22c55e, #149042);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.expenseForm button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
+}
+
+
+.expensesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.expenseItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.expenseItem:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.expenseInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.expenseCategory {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+}
+
+.expenseName {
+  color: white;
+  font-weight: 500;
+}
+
+.expenseDate {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.expenseActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.expenseAmount {
+  color: #f87171;
+  font-weight: 600;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+
+.deleteBtn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+  color: #64748b;
+}
+
+.emptyState span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+  }
+  
+  .sidebar .logo,
+  .sidebar .userName,
+  .sidebar .statPeriod,
+  .sidebar .navItem span:first-child {
+    display: none;
+  }
+  
+  .sidebarStat {
+    text-align: center;
+  }
+  
+  .statAmount {
+    font-size: 0.9rem;
+  }
+  
+  .navItem {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0.75rem;
+  }
+  
+  .mainContent {
+    margin-left: 80px;
+    padding: 1rem;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .categoriesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .expenseForm {
+    flex-direction: column;
+  }
+  
+  .expenseInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+
+
+
+/* app/dashboard/Dashboard.module.css */
+/* أضيفي دول مع الـ CSS اللي عندك */
+
+.totalsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.totalCard {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.totalCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(34, 197, 94, 0.5);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.1);
+}
+
+.totalCardIcon {
+  font-size: 2rem;
+}
+
+.totalCardInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.totalCardLabel {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.totalCardAmount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #22c55e;
+}
+
+.infoBox {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.infoBox h3 {
+  color: #22c55e;
+  margin-bottom: 0.5rem;
+}
+
+.infoBox p {
+  color: #94a3b8;
+}
