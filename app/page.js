@@ -12,8 +12,8 @@ export default function Home() {
     <Main>
       <Hero />
       <Features />
-      <Preview />
       <WhySaveMoney />
+      <Preview />
       <Testimonials />
       {/* <HowToSave /> */}
     </Main>

@@ -34,7 +34,7 @@ export default function Hero() {
         
         <div className={styles.content}>
           <div className={styles.badge}>
-            <span>🔥 Smart Finance Tracker</span>
+            <span>Smart Finance Tracker</span>
           </div>
           
           <h1 className={styles.title}>

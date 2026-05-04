@@ -16,38 +16,38 @@ export default function Footer() {
 
           <div className={styles.linksGrid}>
             <div className={styles.linkGroup}>
-              <h4>Product</h4>
-              <a href="#">Features</a>
+              <a href="/">Home</a>
+              {/* <a href="#">Features</a>
               <a href="#">Pricing</a>
-              <a href="#">Dashboard</a>
+              <a href="#">Dashboard</a> */}
             </div>
             <div className={styles.linkGroup}>
-              <h4>Company</h4>
-              <a href="#">About</a>
+              <a href="/about">About</a>
+              {/* <a href="#">About</a>
               <a href="#">Blog</a>
-              <a href="#">Careers</a>
+              <a href="#">Careers</a> */}
             </div>
             <div className={styles.linkGroup}>
-              <h4>Resources</h4>
-              <a href="#">Help Center</a>
+              <a href="/how-it-works">How It Works</a>
+              {/* <a href="#">Help Center</a>
               <a href="#">Contact</a>
-              <a href="#">Privacy Policy</a>
+              <a href="#">Privacy Policy</a> */}
             </div>
-            <div className={styles.linkGroup}>
+            {/* <div className={styles.linkGroup}>
               <h4>Legal</h4>
               <a href="#">Terms of Service</a>
               <a href="#">Security</a>
               <a href="#">Cookies</a>
-            </div>
+            </div> */}
           </div>
         </div>
 
         <div className={styles.bottomSection}>
           <div className={styles.social}>
-            <span>🐦 Twitter</span>
-            <span>📘 Facebook</span>
-            <span>📸 Instagram</span>
-            <span>💼 LinkedIn</span>
+            <span>Twitter</span>
+            <span>Facebook</span>
+            <span>Instagram</span>
+            <span>LinkedIn</span>
           </div>
           <div className={styles.copyright}>
             © {new Date().getFullYear()} Cash Mind. All rights reserved.

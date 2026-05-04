@@ -24,9 +24,9 @@ export default function Header() {
           <Link href="/how-it-works" className={styles.navLink}>
             How It Works
           </Link>
-          <Link href="/profile" className={styles.navLink}>
+          {/* <Link href="/profile" className={styles.navLink}>
             Profile
-          </Link>
+          </Link> */}
         </nav>
 
         <div className={styles.actions}>
