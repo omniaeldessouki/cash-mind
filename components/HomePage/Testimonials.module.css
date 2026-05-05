@@ -159,15 +159,17 @@
 }
 
 .user h4 {
-  margin: 0;
+  margin-bottom: 6px;
   color: white;
   font-size: 1.1rem;
+  text-align: start;
 }
 
 .user p {
   margin: 0;
   color: #94a3b8;
   font-size: 0.85rem;
+  text-align: start;
 }
 
 .date {
@@ -232,11 +234,17 @@
     font-size: 1.5rem;
   }
   
-  .user h4 {
-    font-size: 1rem;
+  .user h4,
+  .user p {
+    font-size: 1rem !important;
   }
 }
-
+@media (max-width: 487px) {
+   .user h4,
+  .user p {
+    font-size: 0.7rem !important;
+  }
+}
 /* Animation for cards */
 @keyframes fadeInUp {
   from {

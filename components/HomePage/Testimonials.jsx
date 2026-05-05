@@ -13,7 +13,7 @@ export default function Testimonials() {
       image: "👨‍💻",
       text: "Cash Mind completely changed how I track my money. I saved 30% more in just 3 months!",
       rating: 5,
-      date: "March 2024"
+      date: "March 2026"
     },
     {
       name: "Sara Khalil",
@@ -21,7 +21,7 @@ export default function Testimonials() {
       image: "👩‍💼",
       text: "The weekly reports are amazing. I finally understand where my money goes every month.",
       rating: 5,
-      date: "February 2024"
+      date: "February 2026"
     },
     {
       name: "Mohamed Ali",
@@ -29,7 +29,7 @@ export default function Testimonials() {
       image: "👨‍🎨",
       text: "Best expense tracker I've ever used. Simple, fast, and the insights are super helpful!",
       rating: 5,
-      date: "January 2024"
+      date: "January 2026"
     },
     {
       name: "Nour Hassan",
@@ -37,7 +37,7 @@ export default function Testimonials() {
       image: "👩‍🎓",
       text: "As a student, managing budget is crucial. Cash Mind helps me stay on track with my spending.",
       rating: 4,
-      date: "December 2023"
+      date: "December 2026"
     }
   ];
 
