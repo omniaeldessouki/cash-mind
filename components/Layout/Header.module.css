@@ -76,6 +76,13 @@
   padding: 0.5rem 1.2rem;
   border-radius: 8px;
   text-decoration: none;
+  transition: all 0.1s;
+}
+.signupBtn:hover,
+.loginBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+  gap: 0.5rem;
 }
 
 /* Burger */
