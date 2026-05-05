@@ -1,3 +1,4 @@
+/* app/dashboard/Dashboard.module.css - Complete File */
 
 .dashboard {
   display: flex;
@@ -5,7 +6,7 @@
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 }
 
-
+/* ========== SIDEBAR STYLES ========== */
 .sidebar {
   width: 280px;
   background: rgba(0, 0, 0, 0.3);
@@ -17,11 +18,16 @@
   height: 100vh;
   left: 0;
   top: 0;
+  transition: all 0.3s ease;
+  z-index: 90;
+  overflow-x: hidden;
 }
 
 .sidebarHeader {
   padding: 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .logo {
@@ -31,8 +37,8 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  transition: all 0.3s ease;
 }
-
 
 .sidebarStats {
   padding: 1.5rem;
@@ -40,6 +46,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  transition: all 0.3s ease;
 }
 
 .sidebarStat {
@@ -47,18 +54,22 @@
   border-radius: 12px;
   padding: 0.75rem 1rem;
   text-align: center;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .statPeriod {
   font-size: 0.7rem;
   color: #64748b;
   margin-bottom: 0.25rem;
+  transition: all 0.3s ease;
 }
 
 .statAmount {
   font-size: 1.2rem;
   font-weight: 700;
   color: #22c55e;
+  transition: all 0.3s ease;
 }
 
 .sidebarNav {
@@ -79,6 +90,11 @@
   border-radius: 12px;
   text-align: left;
   transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .navItem:hover {
@@ -91,9 +107,21 @@
   color: #22c55e;
 }
 
+/* أيقونات الناف أيتم */
+.navItem span:first-child {
+  font-size: 1.2rem;
+  min-width: 24px;
+}
+
+/* النص بتاع الناف أيتم */
+.navText {
+  transition: all 0.3s ease;
+}
+
 .sidebarFooter {
   padding: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
 .userInfo {
@@ -101,6 +129,8 @@
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .userAvatar {
@@ -112,11 +142,13 @@
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
+  min-width: 40px;
 }
 
 .userName {
   color: white;
   font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .logoutBtn {
@@ -129,17 +161,22 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .logoutBtn:hover {
   background: rgba(239, 68, 68, 0.3);
 }
 
-
+/* ========== MAIN CONTENT STYLES ========== */
 .mainContent {
   flex: 1;
   margin-left: 280px;
   padding: 2rem;
+  transition: all 0.3s ease;
 }
 
 .contentHeader {
@@ -156,7 +193,53 @@
   color: #94a3b8;
 }
 
+/* ========== TOTALS GRID (Dashboard) ========== */
+.totalsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
 
+.totalCard {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.totalCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(34, 197, 94, 0.5);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.1);
+}
+
+.totalCardIcon {
+  font-size: 2rem;
+}
+
+.totalCardInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.totalCardLabel {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.totalCardAmount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #22c55e;
+}
+
+/* ========== STATS GRID (Weekly/Monthly/Yearly) ========== */
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -201,7 +284,7 @@
   color: #22c55e;
 }
 
-
+/* ========== SECTIONS ========== */
 .section {
   background: rgba(255, 255, 255, 0.03);
   border-radius: 20px;
@@ -216,7 +299,7 @@
   margin-bottom: 1.5rem;
 }
 
-
+/* ========== CATEGORIES GRID ========== */
 .categoriesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -264,7 +347,7 @@
   color: #64748b;
 }
 
-
+/* ========== EXPENSE FORM ========== */
 .expenseForm {
   display: flex;
   gap: 1rem;
@@ -305,7 +388,7 @@
   box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
 }
 
-
+/* ========== EXPENSES LIST ========== */
 .expensesList {
   display: flex;
   flex-direction: column;
@@ -320,6 +403,8 @@
   background: rgba(255, 255, 255, 0.03);
   border-radius: 12px;
   transition: all 0.3s;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .expenseItem:hover {
@@ -388,108 +473,7 @@
   margin-bottom: 1rem;
 }
 
-
-@media (max-width: 768px) {
-  .sidebar {
-    width: 80px;
-  }
-  
-  .sidebar .logo,
-  .sidebar .userName,
-  .sidebar .statPeriod,
-  .sidebar .navItem span:first-child {
-    display: none;
-  }
-  
-  .sidebarStat {
-    text-align: center;
-  }
-  
-  .statAmount {
-    font-size: 0.9rem;
-  }
-  
-  .navItem {
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 0.75rem;
-  }
-  
-  .mainContent {
-    margin-left: 80px;
-    padding: 1rem;
-  }
-  
-  .statsGrid {
-    grid-template-columns: 1fr;
-  }
-  
-  .categoriesGrid {
-    grid-template-columns: 1fr;
-  }
-  
-  .expenseForm {
-    flex-direction: column;
-  }
-  
-  .expenseInfo {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-}
-
-
-
-
-/* app/dashboard/Dashboard.module.css */
-/* أضيفي دول مع الـ CSS اللي عندك */
-
-.totalsGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.totalCard {
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(34, 197, 94, 0.05));
-  border-radius: 20px;
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  border: 1px solid rgba(34, 197, 94, 0.2);
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
-.totalCard:hover {
-  transform: translateY(-3px);
-  border-color: rgba(34, 197, 94, 0.5);
-  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.1);
-}
-
-.totalCardIcon {
-  font-size: 2rem;
-}
-
-.totalCardInfo {
-  display: flex;
-  flex-direction: column;
-}
-
-.totalCardLabel {
-  font-size: 0.8rem;
-  color: #94a3b8;
-}
-
-.totalCardAmount {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #22c55e;
-}
-
+/* ========== INFO BOX ========== */
 .infoBox {
   background: rgba(255, 255, 255, 0.03);
   border-radius: 16px;
@@ -505,4 +489,337 @@
 
 .infoBox p {
   color: #94a3b8;
+}
+
+/* ========== RESPONSIVE SIDEBAR - TABLET & MOBILE ========== */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .sidebar {
+    width: 80px;
+  }
+  
+  /* إخفاء النصوص */
+  .logo,
+  .statPeriod,
+  .statAmount,
+  .navText,
+  .userName,
+  .logoutBtn span:last-child {
+    display: none;
+  }
+  
+  /* تعديل الـ header */
+  .sidebarHeader {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* تعديل الـ stats */
+  .sidebarStats {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+  
+  .sidebarStat {
+    padding: 0.5rem;
+  }
+  
+  /* تعديل الناف أيتم */
+  .navItem {
+    padding: 0.75rem;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .navItem span:first-child {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  /* Hover effect - يظهر النص */
+  .navItem:hover {
+    position: relative;
+  }
+  
+  .navItem:hover .navText {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    z-index: 100;
+    margin-left: 8px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* تعديل الفوتر */
+  .sidebarFooter {
+    padding: 1rem;
+  }
+  
+  .userInfo {
+    justify-content: center;
+    margin-bottom: 0.75rem;
+  }
+  
+  .userAvatar {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    font-size: 1rem;
+  }
+  
+  .logoutBtn {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logoutBtn span:first-child {
+    margin: 0;
+  }
+  
+  /* Hover للـ logout */
+  .logoutBtn:hover {
+    position: relative;
+  }
+  
+  .logoutBtn:hover .logoutText {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    z-index: 100;
+    margin-left: 8px;
+    color: #f87171;
+  }
+  
+  /* Main content adjustment */
+  .mainContent {
+    margin-left: 80px;
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+  }
+  
+  /* إخفاء النصوص */
+  .logo,
+  .statPeriod,
+  .statAmount,
+  .navText,
+  .userName,
+  .logoutBtn span:last-child {
+    display: none;
+  }
+  
+  /* تعديل الـ header */
+  .sidebarHeader {
+    padding: 0.75rem;
+    text-align: center;
+  }
+  
+  /* تعديل الـ stats */
+  .sidebarStats {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+  
+  .sidebarStat {
+    padding: 0.4rem;
+  }
+  
+  /* تعديل الناف أيتم */
+  .navItem {
+    padding: 0.6rem;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .navItem span:first-child {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  
+  /* Hover effect - يظهر النص */
+  .navItem:hover {
+    position: relative;
+  }
+  
+  .navItem:hover .navText {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.95);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 100;
+    margin-left: 8px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+  }
+  
+  /* تعديل الفوتر */
+  .sidebarFooter {
+    padding: 0.75rem;
+  }
+  
+  .userInfo {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .userAvatar {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 0.9rem;
+  }
+  
+  .logoutBtn {
+    padding: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logoutBtn span:first-child {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* Hover للـ logout */
+  .logoutBtn:hover {
+    position: relative;
+  }
+  
+  .logoutBtn:hover .logoutText {
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.95);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 100;
+    margin-left: 8px;
+    color: #f87171;
+    pointer-events: none;
+  }
+  
+  /* Main content adjustment */
+  .mainContent {
+    margin-left: 70px;
+    padding: 1rem;
+  }
+  
+  /* Mobile grid adjustments */
+  .totalsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .categoriesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .expenseForm {
+    flex-direction: column;
+  }
+  
+  .expenseForm input,
+  .expenseForm select,
+  .expenseForm button {
+    width: 100%;
+  }
+  
+  .expenseItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .expenseInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  
+  .expenseActions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .contentHeader h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 60px;
+  }
+  
+  .navItem span:first-child {
+    font-size: 1rem;
+  }
+  
+  .userAvatar {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    font-size: 0.8rem;
+  }
+  
+  .navItem:hover .navText,
+  .logoutBtn:hover .logoutText {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .mainContent {
+    margin-left: 60px;
+    padding: 0.75rem;
+  }
+  
+  .contentHeader h1 {
+    font-size: 1.2rem;
+  }
+  
+  .totalCardAmount,
+  .statValue {
+    font-size: 1.1rem;
+  }
 }
