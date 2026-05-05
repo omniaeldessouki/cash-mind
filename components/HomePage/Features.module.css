@@ -1,6 +1,6 @@
 /* components/Features.module.css */
 .features {
-  padding: 5rem 2rem;
+  padding:  2rem;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   position: relative;
   overflow: hidden;
@@ -30,7 +30,7 @@
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1180px;
   margin: 0 auto;
   position: relative;
   z-index: 2;

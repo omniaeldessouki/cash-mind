@@ -1,0 +1,51 @@
+/* components/HowItWorks/ProblemSection.module.css */
+.problem {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #0f1123 0%, #13172e 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  background: rgba(34, 197, 94, 0.15);
+  border-radius: 50px;
+  color: #22c55e;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.problem h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #22c55e, #149042);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.problem p {
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .problem {
+    padding: 3rem 1.5rem;
+  }
+  .problem h2 {
+    font-size: 1.8rem;
+  }
+}

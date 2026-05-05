@@ -3,8 +3,8 @@ import Main from "@/components/Layout/Main";
 import Hero from "@/components/HomePage/Hero";
 import Features from "@/components/HomePage/Features";
 import Testimonials from "@/components/HomePage/Testimonials";
-import Preview from "@/components/HomePage/Preview";
 import WhySaveMoney from "@/components/HomePage/WhySaveMoney";
+import CTASection from "@/components/HomePage/CTASection";
 import HowToSave from "@/components/HomePage/HowToSave";
 
 export default function Home() {
@@ -13,8 +13,8 @@ export default function Home() {
       <Hero />
       <Features />
       <WhySaveMoney />
-      <Preview />
       <Testimonials />
+      <CTASection />
       {/* <HowToSave /> */}
     </Main>
   );

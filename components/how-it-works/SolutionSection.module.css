@@ -1,0 +1,335 @@
+/* components/HowItWorks/SolutionSection.module.css */
+.solution {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #0f1123 0%, #1a1a2e 50%, #16213e 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Background Elements */
+.bgElement1 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.08), transparent);
+  top: -100px;
+  left: -100px;
+  border-radius: 50%;
+  animation: float1 15s ease-in-out infinite;
+}
+
+.bgElement2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.06), transparent);
+  bottom: -150px;
+  right: -150px;
+  border-radius: 50%;
+  animation: float2 20s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -20px) scale(1.1); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-40px, 30px) scale(1.15); }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* Left Content */
+.content {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.content.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(34, 197, 94, 0.15);
+  border-radius: 50px;
+  color: #22c55e;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.2); }
+  50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+}
+
+.content h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: white;
+  line-height: 1.2;
+}
+
+.wavingHand {
+  display: inline-block;
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  75% { transform: rotate(-10deg); }
+}
+
+.highlight {
+  background: linear-gradient(135deg, #22c55e, #149042, #0d9488);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.content p {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.featuresList {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  transition: all 0.3s;
+}
+
+.featureItem:hover {
+  background: rgba(34, 197, 94, 0.15);
+  transform: translateY(-2px);
+}
+
+.featureIcon {
+  font-size: 1rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stars {
+  color: #fbbf24;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.rating span {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Right Side - Images Grid */
+.imagesGrid {
+  position: relative;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  transition-delay: 0.1s;
+}
+
+.imagesGrid.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mainImage {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+
+.mainImage:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px rgba(34, 197, 94, 0.15);
+}
+
+.img1 {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+}
+
+.imageGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), transparent);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.mainImage:hover .imageGlow {
+  opacity: 1;
+}
+
+.smallImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.smallImage {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 0.5rem;
+  text-align: center;
+  transition: all 0.3s;
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+.smallImage:nth-child(1) { animation-delay: 0s; }
+.smallImage:nth-child(2) { animation-delay: 1s; }
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.smallImage:hover {
+  background: rgba(34, 197, 94, 0.1);
+  transform: scale(1.05);
+}
+
+.img2, .img3 {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.floatingCard {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  animation: pulse 2s ease-in-out infinite;
+  z-index: 20;
+}
+
+.floatingCard span:first-child {
+  font-size: 1.2rem;
+}
+
+.floatingCard span:last-child {
+  color: #22c55e;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .featuresList {
+    justify-content: center;
+  }
+  
+  .rating {
+    justify-content: center;
+  }
+  
+  .imagesGrid {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .floatingCard {
+    bottom: -10px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .solution {
+    padding: 3rem 1.5rem;
+  }
+  
+  .content h2 {
+    font-size: 2rem;
+  }
+  
+  .content p {
+    font-size: 1rem;
+  }
+  
+  .smallImages {
+    gap: 0.5rem;
+  }
+}

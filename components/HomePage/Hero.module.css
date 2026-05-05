@@ -84,7 +84,7 @@
   background: linear-gradient(135deg, #0f1123 0%, #1a1a2e 50%, #16213e 100%);
   display: flex;
   align-items: center;
-  padding: 6rem 2rem;
+  padding: 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -262,6 +262,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  padding-bottom: 32px;
 }
 
 .userAvatars {

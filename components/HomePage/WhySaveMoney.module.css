@@ -37,10 +37,15 @@
 }
 
 .container {
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
@@ -85,6 +90,7 @@
 /* Modern Timeline Layout */
 .timeline {
   position: relative;
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto 4rem;
   padding: 2rem 0;
@@ -180,7 +186,8 @@
 
 .contentStat {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   background: rgba(34, 197, 94, 0.1);
   padding: 0.4rem 1rem;
@@ -190,7 +197,7 @@
 .statValue {
   color: #22c55e;
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .statLabel {
@@ -200,8 +207,10 @@
 
 /* Stats Row */
 .statsRow {
+  width: 100%;
+  max-width: 900px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 3rem;
   margin-bottom: 4rem;

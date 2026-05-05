@@ -1,0 +1,84 @@
+/* components/HowItWorks/StepsSection.module.css */
+.steps {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #0f1123 0%, #13172e 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.steps h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #22c55e, #149042);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.steps  p {
+  color: #94a3b8;
+  margin-bottom: 3rem;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.stepCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.stepCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.stepNumber {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #22c55e;
+  opacity: 0.5;
+  margin-bottom: 1rem;
+}
+
+.stepIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.stepCard h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.stepCard p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .steps {
+    padding: 3rem 1.5rem;
+  }
+  .steps h2 {
+    font-size: 1.8rem;
+  }
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+}

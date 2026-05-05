@@ -33,7 +33,7 @@ export default function WhySaveMoney() {
       title: "Emergency Fund",
       description: "Be prepared for unexpected medical bills or job loss",
       number: "04",
-      stat: "6 months",
+      stat: "6 Months",
       statLabel: "Emergency coverage"
     },
     {
@@ -105,7 +105,7 @@ export default function WhySaveMoney() {
         </div>
 
         {/* Modern Quote Section */}
-        <div className={styles.moneyQuote}>
+        {/* <div className={styles.moneyQuote}>
           <div className={styles.quoteWrapper}>
             <div className={styles.quoteIcon}>“</div>
             <p className={styles.quote}>
@@ -118,7 +118,7 @@ export default function WhySaveMoney() {
               <div className={styles.authorLine}></div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* CTA Button */}
         <div className={styles.ctaWrapper}>

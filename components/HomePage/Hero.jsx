@@ -4,7 +4,7 @@
 //   return (
 //     <section className={styles.hero}>
 //       <div className={styles.container}>
-        
+
 //         <h1 className={styles.title}>
 //           Take Control of Your Money <br />
 //           with <span className={styles.highlight}>Cash Mind </span>💸
@@ -31,31 +31,21 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
-        
         <div className={styles.content}>
           <div className={styles.badge}>
             <span>Smart Finance Tracker</span>
           </div>
-          
+
           <h1 className={styles.title}>
             Take Control of Your Money <br />
-            with <span className={styles.highlight}>Cash Mind</span>
+            with <span className={styles.highlight}>Cash Mind </span>
             <span className={styles.titleEmoji}>💸</span>
           </h1>
 
           <p className={styles.desc}>
-            Track your expenses, understand your spending habits, and get smart insights to manage your finances better.
+            Track your expenses, understand your spending habits, and get smart
+            insights to manage your finances better.
           </p>
-
-          <div className={styles.buttons}>
-            <Link href="/signup" className={styles.primaryBtn}>
-              Get Started
-              <span className={styles.btnArrow}>→</span>
-            </Link>
-            <Link href="/dashboard" className={styles.secondaryBtn}>
-              View Dashboard
-            </Link>
-          </div>
 
           <div className={styles.userStats}>
             <div className={styles.userAvatars}>
@@ -68,9 +58,19 @@ export default function Hero() {
               <strong>10,000+</strong> active users
             </div>
           </div>
+
+          <div className={styles.buttons}>
+            <Link href="/signup" className={styles.primaryBtn}>
+              Get Started
+              <span className={styles.btnArrow}>→</span>
+            </Link>
+            <Link href="/dashboard" className={styles.secondaryBtn}>
+              View Dashboard
+            </Link>
+          </div>
         </div>
 
-        <div className={styles.statsGrid}>
+        {/* <div className={styles.statsGrid}>
           <div className={styles.statCard}>
             <div className={styles.statIcon}>📊</div>
             <div className={styles.statNumber}>50K+</div>
@@ -91,8 +91,7 @@ export default function Hero() {
             <div className={styles.statLabel}>User Rating</div>
             <div className={styles.statTrend}>From 10k+ reviews</div>
           </div>
-        </div>
-
+        </div> */}
       </div>
 
       {/* Animated background elements */}

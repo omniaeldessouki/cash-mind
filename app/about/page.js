@@ -6,7 +6,7 @@ import AboutStory from "@/components/About/AboutStory";
 import AboutValues from "@/components/About/AboutValues";
 import AboutTeam from "@/components/About/AboutTeam";
 import AboutStats from "@/components/About/AboutStats";
-import AboutCTA from "@/components/About/AboutCTA";
+import CTASection from "@/components/HomePage/CTASection";
 
 export default function About() {
   return (
@@ -17,7 +17,7 @@ export default function About() {
       <AboutStory />
       <AboutValues />
       <AboutTeam />
-      <AboutCTA />
+      <CTASection />
     </Main>
   );
 }

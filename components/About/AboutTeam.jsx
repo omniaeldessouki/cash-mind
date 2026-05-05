@@ -5,7 +5,7 @@ export default function AboutTeam() {
   const team = [
     {
       name: "Omnia Eldessouki",
-      role: "Founder, Developer & Designer",
+      role: "Founder & Developer",
       image: "👩‍💻",
       bio: "Created Cash Mind entirely from scratch. Built every component, designed every page, and implemented every feature with the goal of helping people take control of their finances.",
       special: true,
@@ -53,7 +53,7 @@ export default function AboutTeam() {
               <span className={styles.memberRole}>{member.role}</span>
               <p>{member.bio}</p>
               <div className={styles.quoteBox}>
-                <span className={styles.quoteIcon}>"</span>
+                {/* <span className={styles.quoteIcon}>"</span> */}
                 <p className={styles.quote}>{member.quote}</p>
               </div>
             </div>
