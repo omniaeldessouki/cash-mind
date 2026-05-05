@@ -77,7 +77,7 @@ function DashboardHome() {
         {/* 3 Totals Cards */}
         <div className={styles.totalsGrid}>
           <div className={styles.totalCard}>
-            <div className={styles.totalCardIcon}>📅</div>
+           <div className={styles.totalCardIcon}>💰</div>
             <div className={styles.totalCardInfo}>
               <span className={styles.totalCardLabel}>This Week</span>
               <span className={styles.totalCardAmount}>
@@ -86,7 +86,7 @@ function DashboardHome() {
             </div>
           </div>
           <div className={styles.totalCard}>
-            <div className={styles.totalCardIcon}>📆</div>
+            <div className={styles.totalCardIcon}>💰</div>
             <div className={styles.totalCardInfo}>
               <span className={styles.totalCardLabel}>This Month</span>
               <span className={styles.totalCardAmount}>
@@ -95,7 +95,7 @@ function DashboardHome() {
             </div>
           </div>
           <div className={styles.totalCard}>
-            <div className={styles.totalCardIcon}>📅</div>
+          <div className={styles.totalCardIcon}>💰</div>
             <div className={styles.totalCardInfo}>
               <span className={styles.totalCardLabel}>This Year</span>
               <span className={styles.totalCardAmount}>

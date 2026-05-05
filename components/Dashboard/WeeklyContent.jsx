@@ -134,7 +134,7 @@ function WeeklyContent() {
             </div>
           </div>
           <div className={styles.statCard}>
-            <div className={styles.statIcon}>📅</div>
+            <div className={styles.statIcon}>📈</div>
             <div className={styles.statInfo}>
               <span className={styles.statLabel}>Average/Day</span>
               <span className={styles.statValue}>

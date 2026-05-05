@@ -1,29 +1,4 @@
-// import styles from "./Hero.module.css";
 
-// export default function Hero() {
-//   return (
-//     <section className={styles.hero}>
-//       <div className={styles.container}>
-
-//         <h1 className={styles.title}>
-//           Take Control of Your Money <br />
-//           with <span className={styles.highlight}>Cash Mind </span>💸
-//         </h1>
-
-//         <p className={styles.desc}>
-//           Track your expenses, understand your spending habits, and get smart insights to manage your finances better.
-//         </p>
-
-//         <div className={styles.buttons}>
-//           <button className={styles.primaryBtn}>Get Started</button>
-//           <button className={styles.secondaryBtn}>View Dashboard</button>
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// }
-// components/Hero.js
 import Link from "next/link";
 import styles from "./Hero.module.css";
 

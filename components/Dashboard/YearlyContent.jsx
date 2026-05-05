@@ -129,7 +129,7 @@ function YearlyContent() {
             </div>
           </div>
           <div className={styles.statCard}>
-            <div className={styles.statIcon}>📅</div>
+            <div className={styles.statIcon}>📈</div>
             <div className={styles.statInfo}>
               <span className={styles.statLabel}>Average/Month</span>
               <span className={styles.statValue}>
