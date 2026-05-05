@@ -17,11 +17,8 @@ export default function HeroSection() {
             understanding, and saving with the smartest expense tracker.
           </p>
           <div className={styles.buttons}>
-            <Link href="/signup" className={styles.primaryBtn}>
+            <Link href="/signup" className={styles.secondaryBtn}>
               Start Tracking Now →
-            </Link>
-            <Link href="/demo" className={styles.secondaryBtn}>
-              Watch Demo ▶
             </Link>
           </div>
           <div className={styles.stats}>
