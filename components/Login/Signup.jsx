@@ -12,7 +12,7 @@ export default function SignupPage() {
     name: "",
     email: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -45,9 +45,9 @@ export default function SignupPage() {
 
     // Get existing users
     const users = JSON.parse(localStorage.getItem("users") || "[]");
-    
+
     // Check if email already exists
-    if (users.find(u => u.email === formData.email)) {
+    if (users.find((u) => u.email === formData.email)) {
       setError("Email already registered. Please login instead.");
       setLoading(false);
       return;
@@ -59,12 +59,12 @@ export default function SignupPage() {
       name: formData.name,
       email: formData.email,
       password: formData.password,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     };
 
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
-    
+
     // Set cookies (auto login after signup)
     setCookie("isAuthenticated", "true");
     setCookie("userName", newUser.name);
@@ -78,7 +78,6 @@ export default function SignupPage() {
 
   return (
     <>
-  
       <div className={styles.container}>
         <div className={styles.card}>
           <div className={styles.header}>
@@ -95,7 +94,9 @@ export default function SignupPage() {
                 type="text"
                 placeholder="Enter your full name"
                 value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
                 required
               />
             </div>
@@ -106,7 +107,9 @@ export default function SignupPage() {
                 type="email"
                 placeholder="Enter your email"
                 value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 required
               />
             </div>
@@ -118,10 +121,12 @@ export default function SignupPage() {
                   type={showPassword ? "text" : "password"}
                   placeholder="Create a password (min 6 characters)"
                   value={formData.password}
-                  onChange={(e) => setFormData({...formData, password: e.target.value})}
+                  onChange={(e) =>
+                    setFormData({ ...formData, password: e.target.value })
+                  }
                   required
                 />
-                <button 
+                <button
                   type="button"
                   className={styles.passwordToggle}
                   onClick={() => setShowPassword(!showPassword)}
@@ -137,20 +142,25 @@ export default function SignupPage() {
                 type={showPassword ? "text" : "password"}
                 placeholder="Confirm your password"
                 value={formData.confirmPassword}
-                onChange={(e) => setFormData({...formData, confirmPassword: e.target.value})}
+                onChange={(e) =>
+                  setFormData({ ...formData, confirmPassword: e.target.value })
+                }
                 required
               />
             </div>
 
             <div className={styles.terms}>
               <label>
-                <input type="checkbox" required />
-                I agree to the <Link href="/terms">Terms of Service</Link> and{" "}
+                <input type="checkbox" required />I agree to the {}
                 <Link href="/privacy">Privacy Policy</Link>
               </label>
             </div>
 
-            <button type="submit" className={styles.submitBtn} disabled={loading}>
+            <button
+              type="submit"
+              className={styles.submitBtn}
+              disabled={loading}
+            >
               {loading ? "Creating Account..." : "Sign Up →"}
             </button>
           </form>
@@ -164,7 +174,6 @@ export default function SignupPage() {
           </p>
         </div>
       </div>
-
     </>
   );
 }

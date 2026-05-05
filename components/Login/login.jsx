@@ -113,9 +113,9 @@ export default function LoginPage() {
               <label className={styles.rememberMe}>
                 <input type="checkbox" /> Remember me
               </label>
-              <Link href="/forgot-password" className={styles.forgotPassword}>
+              {/* <Link href="/forgot-password" className={styles.forgotPassword}>
                 Forgot Password?
-              </Link>
+              </Link> */}
             </div>
 
             <button
@@ -127,13 +127,13 @@ export default function LoginPage() {
             </button>
           </form>
 
-          <div className={styles.divider}>
+          {/* <div className={styles.divider}>
             <span>or</span>
           </div>
 
           <button onClick={handleGuestLogin} className={styles.guestBtn}>
             Continue as Guest 🚀
-          </button>
+          </button> */}
 
           <p className={styles.signupLink}>
             Don't have an account? <Link href="/signup">Sign up here</Link>
