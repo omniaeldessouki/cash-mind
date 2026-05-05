@@ -1,3 +1,4 @@
+/* components/Header.module.css */
 .header {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -116,7 +117,7 @@
   box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
 }
 
-/* Mobile Burger Button - Hidden on desktop */
+/* Mobile Burger Button */
 .burgerBtn {
   display: none;
   flex-direction: column;
@@ -150,29 +151,28 @@
   transform: translateY(-10px) rotate(-45deg);
 }
 
-/* Mobile Menu - Hidden on desktop */
+/* Mobile Menu */
 .mobileMenu {
   display: none;
 }
-
 
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
   }
 
-
+ 
   .desktopNav {
-    display: none;
+    display: none !important;
   }
   
   .desktopActions {
-    display: none;
+    display: none !important;
   }
 
  
   .burgerBtn {
-    display: flex;
+    display: flex !important;
   }
 
 
@@ -184,7 +184,7 @@
     max-width: 320px;
     height: 100vh;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -244,6 +244,11 @@
     display: block;
   }
 
+  .mobileLoginBtn:active {
+    background: rgba(34, 197, 94, 0.1);
+    transform: translateY(-2px);
+  }
+
   .mobileSignupBtn {
     background: linear-gradient(135deg, #22c55e, #149042);
     border: none;
@@ -257,21 +262,25 @@
     transition: all 0.2s ease;
     display: block;
   }
+
+  .mobileSignupBtn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+  }
 }
 
 
 @media (min-width: 769px) {
-
+ 
   .mobileMenu {
     display: none !important;
   }
   
-
   .burgerBtn {
     display: none !important;
   }
   
-
+ 
   .desktopNav {
     display: flex !important;
   }
