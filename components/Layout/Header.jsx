@@ -9,13 +9,9 @@ export default function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+    document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isMenuOpen]);
 
@@ -23,78 +19,96 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
-  const isActive = (path) => {
-    return pathname === path;
-  };
+  const isActive = (path) => pathname === path;
 
   return (
-    <header className={styles.header}>
-      <div className={styles.container}>
-        <div className={styles.logo}>
-          <Link href="/" onClick={handleLinkClick}>
-            <span className={styles.logoIcon}>💸</span>
-            <span className={styles.logoText}>Cash Mind</span>
-          </Link>
-        </div>
+    <>
+      <header className={styles.header}>
+        <div className={styles.container}>
 
-        <nav className={styles.desktopNav}>
-          <Link 
-            href="/" 
-            className={`${styles.navLink} ${isActive('/') ? styles.activeLink : ''}`}
+          {/* Logo */}
+          <div className={styles.logo}>
+            <Link href="/" onClick={handleLinkClick}>
+              <span className={styles.logoIcon}>💸</span>
+              <span className={styles.logoText}>Cash Mind</span>
+            </Link>
+          </div>
+
+          {/* Desktop Nav */}
+          <nav className={styles.desktopNav}>
+            <Link href="/" className={`${styles.navLink} ${isActive("/") ? styles.activeLink : ""}`}>
+              Home
+            </Link>
+            <Link href="/about" className={`${styles.navLink} ${isActive("/about") ? styles.activeLink : ""}`}>
+              About
+            </Link>
+            <Link href="/how-it-works" className={`${styles.navLink} ${isActive("/how-it-works") ? styles.activeLink : ""}`}>
+              How It Works
+            </Link>
+          </nav>
+
+          {/* Desktop Actions */}
+          <div className={styles.desktopActions}>
+            <Link href="/login" className={styles.loginBtn}>Log in</Link>
+            <Link href="/signup" className={styles.signupBtn}>Sign up</Link>
+          </div>
+
+          {/* Burger */}
+          <button
+            className={`${styles.burgerBtn} ${isMenuOpen ? styles.active : ""}`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
+            <span className={styles.burgerLine}></span>
+            <span className={styles.burgerLine}></span>
+            <span className={styles.burgerLine}></span>
+          </button>
+
+        </div>
+      </header>
+
+      {/* Overlay */}
+      {isMenuOpen && (
+        <div
+          className={styles.overlay}
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
+
+      {/* Mobile Menu */}
+      <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}>
+        
+        {/* Close Button */}
+        <button
+          className={styles.closeBtn}
+          onClick={() => setIsMenuOpen(false)}
+          aria-label="Close menu"
+        >
+          ✕
+        </button>
+
+        <nav className={styles.mobileNav}>
+          <Link href="/" onClick={handleLinkClick} className={styles.mobileNavLink}>
             Home
           </Link>
-          <Link 
-            href="/about" 
-            className={`${styles.navLink} ${isActive('/about') ? styles.activeLink : ''}`}
-          >
+          <Link href="/about" onClick={handleLinkClick} className={styles.mobileNavLink}>
             About
           </Link>
-          <Link 
-            href="/how-it-works" 
-            className={`${styles.navLink} ${isActive('/how-it-works') ? styles.activeLink : ''}`}
-          >
+          <Link href="/how-it-works" onClick={handleLinkClick} className={styles.mobileNavLink}>
             How It Works
           </Link>
         </nav>
 
-        <div className={styles.desktopActions}>
-          <Link href="/login" className={styles.loginBtn}>Log in</Link>
-          <Link href="/signup" className={styles.signupBtn}>Sign up</Link>
+        <div className={styles.mobileActions}>
+          <Link href="/login" onClick={handleLinkClick} className={styles.mobileLoginBtn}>
+            Log in
+          </Link>
+          <Link href="/signup" onClick={handleLinkClick} className={styles.mobileSignupBtn}>
+            Sign up
+          </Link>
         </div>
 
-        <button 
-          className={`${styles.burgerBtn} ${isMenuOpen ? styles.active : ""}`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span className={styles.burgerLine}></span>
-          <span className={styles.burgerLine}></span>
-          <span className={styles.burgerLine}></span>
-        </button>
-
-        <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.open : ""}`}>
-          <nav className={styles.mobileNav}>
-            <Link href="/" className={styles.mobileNavLink} onClick={handleLinkClick}>
-              Home
-            </Link>
-            <Link href="/about" className={styles.mobileNavLink} onClick={handleLinkClick}>
-              About
-            </Link>
-            <Link href="/how-it-works" className={styles.mobileNavLink} onClick={handleLinkClick}>
-              How It Works
-            </Link>
-          </nav>
-          <div className={styles.mobileActions}>
-            <Link href="/login" className={styles.mobileLoginBtn} onClick={handleLinkClick}>
-              Log in
-            </Link>
-            <Link href="/signup" className={styles.mobileSignupBtn} onClick={handleLinkClick}>
-              Sign up
-            </Link>
-          </div>
-        </div>
       </div>
-    </header>
+    </>
   );
 }
