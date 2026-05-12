@@ -37,7 +37,7 @@ export default function Testimonials() {
       image: "👩‍🎓",
       text: "As a student, managing budget is crucial. Cash Mind helps me stay on track with my spending.",
       rating: 4,
-      date: "December 2026"
+      date: "December 2025"
     }
   ];
 
