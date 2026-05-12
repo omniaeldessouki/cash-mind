@@ -36,7 +36,7 @@ export default function CTASection() {
                 View Demo
               </Link> */}
             </div>
-            <div className={styles.privacy}>No spam, unsubscribe anytime.</div>
+            {/* <div className={styles.privacy}>No spam, unsubscribe anytime.</div> */}
           </div>
         </div>
       </div>
