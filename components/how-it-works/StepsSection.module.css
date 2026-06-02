@@ -1,16 +1,24 @@
 /* components/HowItWorks/StepsSection.module.css */
+
 .steps {
   padding: 5rem 2rem;
   text-align: center;
   background: linear-gradient(135deg, #0f1123 0%, #13172e 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 3rem;
+}
+.container p {
+  color: #94a3b8;
+  margin-bottom: 3rem;
 }
 
+/* Typography */
 .steps h2 {
   font-size: 2.5rem;
   color: white;
@@ -24,23 +32,20 @@
   color: transparent;
 }
 
-.steps  p {
+.steps > p {
   color: #94a3b8;
   margin-bottom: 3rem;
 }
 
-.stepsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
+/* Step Card Styles */
 .stepCard {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   padding: 2rem;
   text-align: center;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  backdrop-filter: blur(10px);
 }
 
 .stepCard:hover {
@@ -64,21 +69,187 @@
 .stepCard h3 {
   color: white;
   margin-bottom: 0.5rem;
+  font-size: 1.25rem;
 }
 
 .stepCard p {
   color: #94a3b8;
   font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Gradient Shadows */
+.steps::before,
+.steps::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.steps::before {
+  left: 0;
+  background: linear-gradient(to right, #0f1123, transparent);
+}
+
+.steps::after {
+  right: 0;
+  background: linear-gradient(to left, #0f1123, transparent);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
 }
 
 @media (max-width: 768px) {
   .steps {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1rem;
   }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+  
   .steps h2 {
     font-size: 1.8rem;
   }
-  .stepsGrid {
-    grid-template-columns: 1fr;
+  
+  .stepCard {
+    padding: 1.5rem;
+  }
+  
+  .stepCard h3 {
+    font-size: 1.1rem;
+  }
+  
+  .stepCard p {
+    font-size: 0.85rem;
+  }
+  
+  .steps::before,
+  .steps::after {
+    width: 20px;
+  }
+}
+
+/* Animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stepCard {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+/* app/slick-custom.css */
+/* Slick Slider Customization */
+
+.slick-slider {
+  padding: 20px 0 50px 0;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
+
+.slick-slide > div {
+  padding: 0 10px;
+}
+
+/* Dots Styling */
+.slick-dots {
+  bottom: -30px;
+}
+
+.slick-dots li button:before {
+  color: #22c55e !important;
+  font-size: 8px !important;
+  opacity: 0.5 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+  color: #22c55e !important;
+}
+
+/* Arrows Styling */
+.slick-prev,
+.slick-next {
+  width: 60px !important;
+  height: 60px !important;
+  z-index: 10 !important;
+}
+
+.slick-prev {
+  left: -30px !important;
+}
+
+.slick-next {
+  right: -30px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px !important;
+  color: #22c55e !important;
+  opacity: 0.8 !important;
+}
+
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  opacity: 1 !important;
+}
+
+.slick-disabled:before {
+  opacity: 0.3 !important;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .slick-prev {
+    left: -20px !important;
+  }
+  
+  .slick-next {
+    right: -20px !important;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 25px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .slick-prev,
+  .slick-next {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  
+  .slick-prev {
+    left: -15px !important;
+  }
+  
+  .slick-next {
+    right: -15px !important;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 30px !important;
   }
 }
