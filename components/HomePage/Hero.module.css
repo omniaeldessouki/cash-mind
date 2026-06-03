@@ -1,11 +1,12 @@
 .hero {
-  min-height: 100vh;
+  min-height: 92vh;
   position: relative;
   background: linear-gradient(135deg, #0a0f2a 0%, #0a0a1a 100%);
   display: flex;
   align-items: center;
   overflow: hidden;
   isolation: isolate;
+  padding-bottom: 8px;
 }
 
 /* Animated Gradient Orbs */
@@ -376,7 +377,7 @@
 /* Scroll Indicator */
 .scrollIndicator {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -390,7 +391,7 @@
 
 .scrollMouse {
   width: 24px;
-  height: 40px;
+  height: 38px;
   border: 2px solid #64748b;
   border-radius: 20px;
   position: relative;
